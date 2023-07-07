@@ -8,7 +8,7 @@ I. Requirement:
   
   Step 3: Do the exercise from https://www.geeksforgeeks.org/c-sharp-tutorial/
   
-  Step 4: For every exercise, please create a new branch CSH-<your-name>-A000...  from develop branch and check out to the new branch,     
+  Step 4: For every exercise, please create a new branch CSH-[your-name]-A000...(new number)  from develop branch and check out to the new branch,     
   after committing code with every exercise.  ( git commit -m "....." )
   
   Step 5: git add (files new, source codes new, ...)
