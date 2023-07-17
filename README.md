@@ -1,6 +1,6 @@
 # CSharpProgrammingLanguage
 
-Step 1: git pull
+Step 1: git pull     (from develop branch)
 
 Step 2: git branch [new-branch] [origin-branch]
 
