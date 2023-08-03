@@ -13,3 +13,18 @@ D:\ProgrammingLanguage\CSharp\CSharpProgrammingLanguage\ModuleApp\ModuleApp\obj\
 D:\ProgrammingLanguage\CSharp\CSharpProgrammingLanguage\ModuleApp\ModuleApp\obj\Debug\net6.0\ModuleApp.pdb
 D:\ProgrammingLanguage\CSharp\CSharpProgrammingLanguage\ModuleApp\ModuleApp\obj\Debug\net6.0\ModuleApp.genruntimeconfig.cache
 D:\ProgrammingLanguage\CSharp\CSharpProgrammingLanguage\ModuleApp\ModuleApp\obj\Debug\net6.0\ref\ModuleApp.dll
+D:\C#\App\Animal management\CSharpProgrammingLanguage\ModuleApp\ModuleApp\bin\Debug\net6.0\ModuleApp.exe
+D:\C#\App\Animal management\CSharpProgrammingLanguage\ModuleApp\ModuleApp\bin\Debug\net6.0\ModuleApp.deps.json
+D:\C#\App\Animal management\CSharpProgrammingLanguage\ModuleApp\ModuleApp\bin\Debug\net6.0\ModuleApp.runtimeconfig.json
+D:\C#\App\Animal management\CSharpProgrammingLanguage\ModuleApp\ModuleApp\bin\Debug\net6.0\ModuleApp.dll
+D:\C#\App\Animal management\CSharpProgrammingLanguage\ModuleApp\ModuleApp\bin\Debug\net6.0\ModuleApp.pdb
+D:\C#\App\Animal management\CSharpProgrammingLanguage\ModuleApp\ModuleApp\obj\Debug\net6.0\ModuleApp.csproj.AssemblyReference.cache
+D:\C#\App\Animal management\CSharpProgrammingLanguage\ModuleApp\ModuleApp\obj\Debug\net6.0\ModuleApp.GeneratedMSBuildEditorConfig.editorconfig
+D:\C#\App\Animal management\CSharpProgrammingLanguage\ModuleApp\ModuleApp\obj\Debug\net6.0\ModuleApp.AssemblyInfoInputs.cache
+D:\C#\App\Animal management\CSharpProgrammingLanguage\ModuleApp\ModuleApp\obj\Debug\net6.0\ModuleApp.AssemblyInfo.cs
+D:\C#\App\Animal management\CSharpProgrammingLanguage\ModuleApp\ModuleApp\obj\Debug\net6.0\ModuleApp.csproj.CoreCompileInputs.cache
+D:\C#\App\Animal management\CSharpProgrammingLanguage\ModuleApp\ModuleApp\obj\Debug\net6.0\ModuleApp.dll
+D:\C#\App\Animal management\CSharpProgrammingLanguage\ModuleApp\ModuleApp\obj\Debug\net6.0\refint\ModuleApp.dll
+D:\C#\App\Animal management\CSharpProgrammingLanguage\ModuleApp\ModuleApp\obj\Debug\net6.0\ModuleApp.pdb
+D:\C#\App\Animal management\CSharpProgrammingLanguage\ModuleApp\ModuleApp\obj\Debug\net6.0\ModuleApp.genruntimeconfig.cache
+D:\C#\App\Animal management\CSharpProgrammingLanguage\ModuleApp\ModuleApp\obj\Debug\net6.0\ref\ModuleApp.dll

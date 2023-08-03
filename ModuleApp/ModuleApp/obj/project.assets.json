@@ -8,27 +8,26 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Admins\\.nuget\\packages\\": {}
+    "C:\\Users\\MyPC\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\ProgrammingLanguage\\CSharp\\CSharpProgrammingLanguage\\ModuleApp\\ModuleApp\\ModuleApp.csproj",
+      "projectUniqueName": "D:\\C#\\App\\Animal management\\CSharpProgrammingLanguage\\ModuleApp\\ModuleApp\\ModuleApp.csproj",
       "projectName": "ModuleApp",
-      "projectPath": "D:\\ProgrammingLanguage\\CSharp\\CSharpProgrammingLanguage\\ModuleApp\\ModuleApp\\ModuleApp.csproj",
-      "packagesPath": "C:\\Users\\Admins\\.nuget\\packages\\",
-      "outputPath": "D:\\ProgrammingLanguage\\CSharp\\CSharpProgrammingLanguage\\ModuleApp\\ModuleApp\\obj\\",
+      "projectPath": "D:\\C#\\App\\Animal management\\CSharpProgrammingLanguage\\ModuleApp\\ModuleApp\\ModuleApp.csproj",
+      "packagesPath": "C:\\Users\\MyPC\\.nuget\\packages\\",
+      "outputPath": "D:\\C#\\App\\Animal management\\CSharpProgrammingLanguage\\ModuleApp\\ModuleApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Admins\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\MyPC\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {}
       },
       "frameworks": {
         "net6.0": {
@@ -61,7 +60,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
       }
     }
   }

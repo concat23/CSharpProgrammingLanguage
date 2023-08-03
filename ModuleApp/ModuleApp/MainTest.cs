@@ -3,6 +3,8 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using System.Runtime.CompilerServices;
+using System.Runtime.ConstrainedExecution;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -25,7 +27,7 @@ namespace ModuleApp
             Id = autonumber.Next();
         }
 
-        public Student(string name, string gender, int age, double pointmath, double pointphysics, double pointchemistry)
+        public Student(String name, string gender, int age, double pointmath, double pointphysics, double pointchemistry)
         {
             Name = name;
             Gender = gender;
@@ -40,7 +42,28 @@ namespace ModuleApp
             if (sv != null)
             {
                 Console.Write("Enter your name: ");
-                sv.Name = Console.ReadLine();
+                sv.Name = Convert.ToString(Console.ReadLine());
+
+                sv.Name = delete_space_head_tail(sv.Name);
+
+                char[] T;
+                T = delete_space_middle(sv.Name);
+                string tempt = new string(T);
+                sv.Name = tempt;
+
+                do
+                {
+                    if (IsNumberInName(sv.Name) == true)
+                    {
+                        Console.WriteLine("Not right syntax !!!");
+
+                        Console.Write("Enter your name: ");
+                        sv.Name = Convert.ToString(Console.ReadLine());
+                       
+                    }          
+                } while (IsNumberInName(sv.Name) == true);
+
+
 
                 Console.Write("Enter your gender: ");
                 sv.Gender = Console.ReadLine();
@@ -62,8 +85,50 @@ namespace ModuleApp
             {
                 return;
             }
+        }
 
 
+        public char[] delete_space_middle(string name)
+        {
+            
+            char[] tempt = name.ToCharArray();
+
+            int lents = tempt.Length;
+
+            for(int i = 0; i < lents; i++)
+            {
+                if (tempt[i] == 32 && tempt[i + 1] == 32)
+                {
+                    for(int j = i + 1; j < lents - 1; j++)
+                    {
+                        tempt[j] = tempt[j + 1];
+                    }
+                    i--;
+                    lents--;
+                    tempt[lents - 1] = '\0';
+                }
+            }
+            return tempt;
+        }
+
+
+        public string delete_space_head_tail(string name)
+        {
+            string tempt = name.TrimStart();
+            tempt = tempt.TrimEnd();
+            return tempt;
+        }
+       
+        public bool IsNumberInName(String name)
+        {
+            for(int i = 0; i < name.Length; i++)
+            {
+                if (char.IsDigit(name[i]) == true)
+                {
+                    return true;
+                }
+            }
+            return false;
         }
 
         public void OutputStudent(Student sv)
@@ -168,7 +233,7 @@ namespace ModuleApp
                                 case '2':
                                     Console.Clear();
                                     Console.Write("Enter the number of students to add: ");
-                                    int numberOfStudents = Convert.ToInt32(Console.ReadLine());
+                                        int numberOfStudents = Convert.ToInt32(Console.ReadLine());
                                     for (int i = 0; i < numberOfStudents; i++)
                                     {
                                         Console.WriteLine("Student [" + (i + 1) + "]:"); student = new Student();
