@@ -44,24 +44,25 @@ namespace ModuleApp
                 Console.Write("Enter your name: ");
                 sv.Name = Convert.ToString(Console.ReadLine());
 
-                sv.Name = delete_space_head_tail(sv.Name);
-
-                char[] T;
-                T = delete_space_middle(sv.Name);
-                string tempt = new string(T);
-                sv.Name = tempt;
-
-                do
+                sv.Name = string_handling(sv.Name);
+                
+                if(IsNumberInName(sv.Name) == true || IsLowerCase(sv.Name) == true || IsEmptyString(sv.Name) == true)
                 {
-                    if (IsNumberInName(sv.Name) == true)
+                    do
                     {
-                        Console.WriteLine("Not right syntax !!!");
+                        if (IsNumberInName(sv.Name) == true || IsLowerCase(sv.Name) == true || IsEmptyString(sv.Name) == true)
+                        {
+                            Console.WriteLine("Not right syntax !!!");
+                        }
 
                         Console.Write("Enter your name: ");
                         sv.Name = Convert.ToString(Console.ReadLine());
-                       
-                    }          
-                } while (IsNumberInName(sv.Name) == true);
+
+                        sv.Name = string_handling(sv.Name);
+
+                    } while (IsNumberInName(sv.Name) == true || IsLowerCase(sv.Name) == true || IsEmptyString(sv.Name) == true);
+                }
+                
 
 
 
@@ -69,7 +70,9 @@ namespace ModuleApp
                 sv.Gender = Console.ReadLine();
 
                 Console.Write("Enter your age: ");
-                sv.Age = Convert.ToInt32(Console.ReadLine());
+                string TemptAge = Convert.ToString(Console.ReadLine());
+                sv.Age = AgeHandling(TemptAge);
+                
 
 
                 Console.Write("Enter your point math: ");
@@ -87,6 +90,80 @@ namespace ModuleApp
             }
         }
 
+        public int AgeHandling(string value)
+        {
+            int tempt;
+            do 
+            {
+                if(IsAge(value) == true)
+                {
+                    Console.WriteLine("Error: must not contain characters inside age !!!");
+                }
+                Console.Write("Enter your age: ");
+                value = Convert.ToString(Console.ReadLine());
+            } while (IsAge(value) == true);
+             
+            tempt = Convert.ToInt32(value);
+            return tempt;
+        }
+
+
+        public bool IsAge(string value)
+        {
+            char[] T = value.ToCharArray();
+            for(int i = 0; i < T.Length; i++)
+            {
+                if ((T[i] >= 65 && T[i] <= 90) || (T[i] >= 97 && T[i] <= 122))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        
+
+        public bool IsEmptyString(string name)
+        {
+            if (name == null || name.Length == 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }      
+        }
+
+        public bool IsLowerCase(string name)
+        {
+            char[] t = name.ToCharArray();
+            int lents = t.Length;
+            for (int i = 0; i < lents; i++)
+            {
+                if ((t[i] >=97 && t[i] <= 122) || (t[i] >= 33 && t[i] <= 63))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+
+        public string string_handling(string name)
+        {
+            if(IsEmptyString(name) == true)
+            {
+                return name;
+            }
+            string tempt = delete_space_head_tail(name);
+            name = tempt;
+
+            char[] t;
+            t = delete_space_middle(name);
+            name = new string(t);
+            return name;
+        }
 
         public char[] delete_space_middle(string name)
         {
@@ -110,6 +187,8 @@ namespace ModuleApp
             }
             return tempt;
         }
+
+
 
 
         public string delete_space_head_tail(string name)
@@ -217,12 +296,13 @@ namespace ModuleApp
                         {
                             SubMenu();
                             Console.Write("Enter your feature: ");
-                            char subChoice = Console.ReadKey().KeyChar;
+                            int subChoice = Convert.ToInt32(Console.ReadLine());
+                            //char subChoice = Console.ReadKey().KeyChar;
 
                             Student student = new Student();
                             switch (subChoice)
                             {
-                                case '1':
+                                case 1:
                                     Console.Clear();
                                     sm.StudentList();
                                     Console.WriteLine("Press any key to continue.");
@@ -230,7 +310,7 @@ namespace ModuleApp
                                     Console.Clear();
                                     break;
 
-                                case '2':
+                                case 2:
                                     Console.Clear();
                                     Console.Write("Enter the number of students to add: ");
                                         int numberOfStudents = Convert.ToInt32(Console.ReadLine());
@@ -248,7 +328,7 @@ namespace ModuleApp
                                     Console.Clear();
                                     break;
 
-                                case '0':
+                                case 0:
                                     backToMainMenu = true;
                                     Console.Clear();
                                     break;
