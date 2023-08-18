@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Runtime.CompilerServices;
 using System.Runtime.ConstrainedExecution;
 using System.Text;
@@ -45,29 +46,55 @@ namespace ModuleApp
                 sv.Name = Convert.ToString(Console.ReadLine());
 
                 sv.Name = string_handling(sv.Name);
-                
-                if(IsNumberInName(sv.Name) == true || IsLowerCase(sv.Name) == true || IsEmptyString(sv.Name) == true)
+
+                bool IsCheck = false;
+                if (GetStringLength(sv.Name) < 20 && GetStringLength(sv.Name) > 30)
                 {
+                    IsCheck = true;
+                }
+
+               
                     do
                     {
-                        if (IsNumberInName(sv.Name) == true || IsLowerCase(sv.Name) == true || IsEmptyString(sv.Name) == true)
-                        {
-                            Console.WriteLine("Not right syntax !!!");
-                        }
 
+                        if (IsNumberInName(sv.Name) == true)
+                        {
+                            Console.WriteLine("Can not enter number into name !!!");
+                        }
+                         if (IsLowerCase(sv.Name) == true)
+                        {
+                            Console.WriteLine("Name have to uppercase !!!");
+
+                        }
+                    //int X = GetStringLength(sv.Name);
+                    //Console.WriteLine(X);
+                    if (GetStringLength(sv.Name) < 20 || GetStringLength(sv.Name) > 30)
+                        {
+                            Console.WriteLine("The entered string is not longer than 30 or shorter than 20 characters !!!");
+                        }
+                    if (IsEmptyString(sv.Name) == true)
+                        {
+                            Console.WriteLine("Name is empty !!!");
+                        }
+                        
+
+                       
+                      
                         Console.Write("Enter your name: ");
                         sv.Name = Convert.ToString(Console.ReadLine());
 
                         sv.Name = string_handling(sv.Name);
 
-                    } while (IsNumberInName(sv.Name) == true || IsLowerCase(sv.Name) == true || IsEmptyString(sv.Name) == true);
-                }
+                    } while (IsNumberInName(sv.Name) == true || IsLowerCase(sv.Name) == true || IsEmptyString(sv.Name) == true || GetStringLength(sv.Name) < 20 && GetStringLength(sv.Name) > 30);
+           
                 
 
 
 
                 Console.Write("Enter your gender: ");
                 sv.Gender = Console.ReadLine();
+
+
 
                 Console.Write("Enter your age: ");
                 string TemptAge = Convert.ToString(Console.ReadLine());
@@ -88,6 +115,14 @@ namespace ModuleApp
             {
                 return;
             }
+        }
+
+        
+
+        public int GetStringLength(string value)
+        {
+            int lent = value.Length;
+            return lent;
         }
 
         public int AgeHandling(string value)
@@ -261,6 +296,11 @@ namespace ModuleApp
 
     internal static class TestHelpers
     {
+        public static int GetStringLength(string value)
+        {
+            int lent = value.Length;
+            return lent;
+        }
         public static void MainMenu()
         {
             Console.WriteLine("========== WELCOME TO MY SYSTEM =========");
@@ -277,8 +317,16 @@ namespace ModuleApp
 
         static void Main(string[] args)
         {
+          
+            string str = "NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN";
+       
+            Console.WriteLine("kq =" + GetStringLength(str));
+
             StudentManagement sm = new StudentManagement();
             bool exit = false;
+
+
+
 
             do
             {
@@ -295,8 +343,17 @@ namespace ModuleApp
                         do
                         {
                             SubMenu();
+                            int subChoice = 0;
                             Console.Write("Enter your feature: ");
-                            int subChoice = Convert.ToInt32(Console.ReadLine());
+                            try
+                            {
+                                subChoice = Int32.Parse(Console.ReadLine());
+                            }
+                            catch (FormatException fe)
+                            {
+                                Console.WriteLine(fe);
+                            }
+                            
                             //char subChoice = Console.ReadKey().KeyChar;
 
                             Student student = new Student();
